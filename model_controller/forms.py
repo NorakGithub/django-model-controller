@@ -3,7 +3,7 @@ from crispy_forms.helper import FormHelper
 from django import forms
 
 
-class CreateForm(forms.ModelForm):
+class ModelControllerForm(forms.ModelForm):
     """
     Extend this class when you want to automatically set created_user
     and updated_user to the current login user.
@@ -17,7 +17,7 @@ class CreateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         if not hasattr(self, 'request') or self.request is None:
             self.request = kwargs.pop('request', None)
-        super(CreateForm, self).__init__(*args, **kwargs)
+        super(ModelControllerForm, self).__init__(*args, **kwargs)
 
         self.helper = FormHelper()
         self.helper.form_method = 'POST'
@@ -27,4 +27,4 @@ class CreateForm(forms.ModelForm):
             self.instance.created_user = self.request.user
         self.instance.updated_user = self.request.user
 
-        return super(CreateForm, self).save(commit=commit)
+        return super(ModelControllerForm, self).save(commit=commit)

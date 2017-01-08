@@ -17,11 +17,3 @@ class AbstractModelController(AbstractTimeStampMarker):
 
     class Meta:
         abstract = True
-
-    def save(self, *args, **kwargs):
-        request = kwargs.pop('request', None)
-        if request:
-            if not self.pk:
-                self.created_by = request.user
-            self.updated_by = request.user
-        return super(AbstractModelController, self).save(*args, **kwargs)

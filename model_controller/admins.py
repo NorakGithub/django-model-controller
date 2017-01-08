@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from commons.utils import EXCLUDE_MODEL_CONTROLLER_FIELDS
+from model_controller.utils import EXCLUDE_MODEL_CONTROLLER_FIELDS
 
 
 class ModelControllerAdmin(admin.ModelAdmin):
