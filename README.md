@@ -1,8 +1,11 @@
-# [Django Model Controller][doc]
+# Django Model Controller
+
+[![Documentation Status](https://readthedocs.org/projects/django-model-controller/badge/?version=latest)](http://django-model-controller.readthedocs.io/en/latest/?badge=latest)
+                
 
 **Model instance tracker.**
 
-Full documentation for this project available [http://django-common-boxset.readthedocs.io/][docs].
+Full documentation for this project available at [http://django-common-boxset.readthedocs.io/][docs]
 
 ---
 
