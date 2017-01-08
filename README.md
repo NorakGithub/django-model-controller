@@ -16,3 +16,7 @@ INSTALLED_APPS = [
     'commons',
 ]
 ```
+
+## Documentation
+
+More detail about how to this package here [doc](http://django-common-boxset.readthedocs.io/).
