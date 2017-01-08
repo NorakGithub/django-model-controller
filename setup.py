@@ -37,6 +37,7 @@ setup(
     ],
     install_requires=[
         'django>=1.7',
-        'django-braces>=1.8.1'
+        'django-braces>=1.8.1',
+        'django-crispy-forms>=1.6.1',
     ]
 )
