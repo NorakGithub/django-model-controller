@@ -1,6 +1,6 @@
-# Commons
+# Django Common Box Set
 
-Common is an reusable app for common usage when starting a project
+Common usage function in a Django project.
 
 ## Quick start
 
