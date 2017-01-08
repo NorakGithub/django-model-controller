@@ -1,6 +1,10 @@
-# Django Common Box Set
+# Django Model Controller
 
-Common usage function in a Django project.
+**Model instance tracker.**
+
+Full documentation for this project available [here](http://django-common-boxset.readthedocs.io/).
+
+---
 
 ## Quick start
 
@@ -8,15 +12,3 @@ Common usage function in a Django project.
 ```
 $ pip install django-common-boxset
 ```
-
-2. Add commons to your INSTALLED_APPS setting like this:
-```
-INSTALLED_APPS = [
-    ...
-    'commons',
-]
-```
-
-## Documentation
-
-More detail about how to this package here [doc](http://django-common-boxset.readthedocs.io/).
