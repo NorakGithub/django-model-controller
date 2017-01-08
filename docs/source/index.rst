@@ -1,18 +1,19 @@
-.. django-common-boxset documentation master file, created by
-   sphinx-quickstart on Sun Jan  8 17:22:47 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Welcome to Django Model Controller Documentation
+================================================
 
-Welcome to Django Common BoxSet Documentation
-=============================================
+**Keep tracking all of your record.**
 
-Django Common BoxSet provide the common function that could be used to quickly getting start a project.
+Overview
+--------
+Come to a time that you want to able to keep track on each record of data that was created or updated.
+This project give you the ability to answer these questions: When this record was created? When this record was updated?
+Who created this record? Who updated this record?
 
 Requirements
 ------------
 
-* Python 3.5
-* Django 1.9
+* Python (2.7, 3.2, 3.3, 3.4, 3.5)
+* Django (1.8, 1.9, 1.10)
 
 Content
 =======
@@ -20,6 +21,9 @@ Content
    :maxdepth: 2
 
    getting-start
+   model
+   form
+   view
    tutorial/tutorial
    license
 

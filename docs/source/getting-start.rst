@@ -2,10 +2,10 @@ Getting Start
 =============
 Quick start guide to getting start using Django Common BoxSet.
 
-Setup Package
--------------
+Setup
+-----
 
-Install with pip::
+Install with pip and add it to your requirements::
 
-    $ pip install django-common-boxset
+    $ pip install django-model-controller
 

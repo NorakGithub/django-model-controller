@@ -54,7 +54,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'django-common-boxset'
+project = 'Django Model Controller'
 copyright = '2017, Khemanorak Khath'
 author = 'Khemanorak Khath'
 
@@ -114,7 +114,7 @@ html_static_path = ['nstatic']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'django-common-boxsetdoc'
+htmlhelp_basename = 'django-model-controllerdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -141,7 +141,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'django-common-boxset.tex', 'django-common-boxset Documentation',
+    (master_doc, 'django-model-controller.tex', 'django-model-controller Documentation',
      'Khemanorak Khath', 'manual'),
 ]
 
@@ -151,7 +151,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'django-common-boxset', 'django-common-boxset Documentation',
+    (master_doc, 'django-model-controller', 'django-model-controller Documentation',
      [author], 1)
 ]
 
@@ -162,8 +162,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'django-common-boxset', 'django-common-boxset Documentation',
-     author, 'django-common-boxset', 'One line description of project.',
+    (master_doc, 'django-model-controller', 'django-model-controller Documentation',
+     author, 'django-model-controller', 'One line description of project.',
      'Miscellaneous'),
 ]
 
