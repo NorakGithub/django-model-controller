@@ -5,7 +5,7 @@
 
 **Model instance tracker.**
 
-Full documentation for this project available at [http://django-model-controller.readthedocs.io][http://django-model-controller.readthedocs.io]
+Full documentation for this project available at [http://django-model-controller.readthedocs.io][docs]
 
 ---
 
@@ -39,3 +39,4 @@ These are the classes that you can use to extend your classes:
 ```
 $ pip install django-common-boxset
 ```
+[docs]: http://django-model-controller.readthedocs.io
