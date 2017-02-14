@@ -1,4 +1,0 @@
-Model
-=====
-
-Hello World

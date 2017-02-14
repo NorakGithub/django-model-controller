@@ -1,4 +1,0 @@
-Setup Model
-===========
-
-Hello World

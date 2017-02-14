@@ -1,4 +1,0 @@
-Setup View
-==========
-
-Hello world

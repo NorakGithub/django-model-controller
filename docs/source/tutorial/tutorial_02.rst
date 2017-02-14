@@ -1,4 +1,0 @@
-Setup Form
-==========
-
-Hello World
