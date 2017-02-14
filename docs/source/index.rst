@@ -21,10 +21,6 @@ Content
    :maxdepth: 2
 
    getting-start
-   model
-   form
-   view
-   tutorial/tutorial
    license
 
 
