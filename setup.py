@@ -2,7 +2,7 @@ import os
 from setuptools import find_packages, setup
 
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
 
@@ -12,15 +12,16 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-model-controller',
-    version='0.1',
+    version='0.0.1',
     packages=find_packages(),
     include_package_data=True,
     license='BSD',  # example license
-    description='A common usage on project started',
+    description='A model tracking field',
     long_description=README,
-    url='',
+    url='https://github.com/NorakGithub/django-model-controller',
     author='Khemanorak Khath',
     author_email='khath.khemanorak@google.com',
+    keywords='django model controller tracking',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
