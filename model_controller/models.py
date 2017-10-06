@@ -12,8 +12,10 @@ class AbstractTimeStampMarker(models.Model):
 
 
 class AbstractModelController(AbstractTimeStampMarker):
-    created_user = models.ForeignKey(User, related_name="%(class)s_created_user", verbose_name=_("Created User"))
-    updated_user = models.ForeignKey(User, related_name="%(class)s_updated_user", verbose_name=_("Updated User"))
+    created_user = models.ForeignKey(User, related_name="%(class)s_created_user", verbose_name=_("Created User"),
+                                     on_delete=models.DO_NOTHING)
+    updated_user = models.ForeignKey(User, related_name="%(class)s_updated_user", verbose_name=_("Updated User"),
+                                     on_delete=models.DO_NOTHING)
 
     class Meta:
         abstract = True
