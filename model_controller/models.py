@@ -64,3 +64,10 @@ class AbstractSoftDelete(models.Model):
     def restore(self):
         self.alive = True
         self.save()
+
+
+class AbstractSoftDeletionModelController(AbstractSoftDelete,
+                                          AbstractModelController):
+
+    class Meta:
+        abstract = True
