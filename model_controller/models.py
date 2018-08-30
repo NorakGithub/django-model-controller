@@ -26,13 +26,13 @@ class AbstractModelController(AbstractTimeStampMarker):
         to=User,
         related_name="%(class)s_created_user",
         verbose_name=_("Created User"),
-        on_delete=models.DO_NOTHING
+        on_delete=models.CASCADE
     )
     updated_user = models.ForeignKey(
         to=User,
         related_name="%(class)s_updated_user",
         verbose_name=_("Updated User"),
-        on_delete=models.DO_NOTHING
+        on_delete=models.CASCADE
     )
 
     class Meta:
