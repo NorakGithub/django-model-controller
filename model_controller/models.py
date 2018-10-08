@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.db import models
 from django.db.models import signals
 from django.utils.translation import ugettext_lazy as _
@@ -23,13 +23,13 @@ class AbstractTimeStampMarker(models.Model):
 
 class AbstractModelController(AbstractTimeStampMarker):
     created_user = models.ForeignKey(
-        to=User,
+        to=settings.AUTH_USER_MODEL,
         related_name="%(class)s_created_user",
         verbose_name=_("Created User"),
         on_delete=models.CASCADE
     )
     updated_user = models.ForeignKey(
-        to=User,
+        to=settings.AUTH_USER_MODEL,
         related_name="%(class)s_updated_user",
         verbose_name=_("Updated User"),
         on_delete=models.CASCADE
