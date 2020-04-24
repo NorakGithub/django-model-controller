@@ -12,7 +12,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-model-controller',
-    version='0.2.4',
+    version='{tag}',
     packages=find_packages(),
     include_package_data=True,
     license='BSD',  # example license
@@ -22,6 +22,9 @@ setup(
     author='Khemanorak Khath',
     author_email='khath.khemanorak@google.com',
     keywords='django model controller tracking',
+    setup_requires=[
+        'setuptools-git-version'
+    ],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
