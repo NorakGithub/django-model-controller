@@ -1,6 +1,8 @@
 Django Model Controller
 =======================
 
+.. image:: https://travis-ci.org/NorakGithub/django-model-controller.svg?branch=master
+    :target: https://travis-ci.org/NorakGithub/django-model-controller
 .. image:: https://readthedocs.org/projects/django-model-controller/badge/?version=latest
 
 **Model instance tracker.**
