@@ -82,3 +82,11 @@ class AbstractSoftDeletionModelController(AbstractSoftDelete,
 
     class Meta:
         abstract = True
+
+
+class AbstractSoftDeletionModelControllerWithoutForeignKey(
+    AbstractSoftDelete,
+    AbstractModelControllerWithoutForeignKey
+):
+    class Meta:
+        abstract = True
