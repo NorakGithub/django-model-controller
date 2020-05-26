@@ -39,6 +39,17 @@ class AbstractModelController(AbstractTimeStampMarker):
         abstract = True
 
 
+class AbstractModelControllerWithoutForeignKey(AbstractTimeStampMarker):
+    created_user_id = models.IntegerField(_('Created User ID'))
+    updated_user_id = models.IntegerField(
+        _('Updated User ID'),
+        null=True
+    )
+
+    class Meta:
+        abstract = True
+
+
 class AbstractSoftDelete(models.Model):
     """
     Soft delete is used when you don't want to actually delete data from your
