@@ -39,6 +39,24 @@ class AbstractModelController(AbstractTimeStampMarker):
         abstract = True
 
 
+class AbstractCreatedUpdatedUsername(models.Model):
+    created_username = models.CharField(
+        _('Created Username'),
+        max_length=200,
+        null=True,
+        blank=True,
+    )
+    updated_username = models.CharField(
+        _('Updated Username'),
+        max_length=200,
+        null=True,
+        blank=True
+    )
+
+    class Meta:
+        abstract = True
+
+
 class AbstractModelControllerWithoutForeignKey(AbstractTimeStampMarker):
     created_user_id = models.IntegerField(_('Created User ID'))
     updated_user_id = models.IntegerField(
@@ -87,6 +105,15 @@ class AbstractSoftDeletionModelController(AbstractSoftDelete,
 class AbstractSoftDeletionModelControllerWithoutForeignKey(
     AbstractSoftDelete,
     AbstractModelControllerWithoutForeignKey
+):
+    class Meta:
+        abstract = True
+
+
+class AbstractSoftDeletionCreatedUpdatedUsernameTimestamp(
+    AbstractSoftDelete,
+    AbstractTimeStampMarker,
+    AbstractCreatedUpdatedUsername,
 ):
     class Meta:
         abstract = True
