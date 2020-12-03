@@ -85,7 +85,7 @@ class AbstractSoftDelete(models.Model):
     def delete(self, using=None, keep_parents=False):
         self.alive = None
         self.save()
-        signals.post_delete.send(sender=self.__class__, instance=self)
+        signals.post_delete.send(sender=self.__class__, instance=self, using=using)
 
     def hard_delete(self, using=None, keep_parents=False):
         super(AbstractSoftDelete, self).delete(using, keep_parents)
