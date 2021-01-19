@@ -11,9 +11,14 @@ class SoftDeletionManager(models.Manager):
         super(SoftDeletionManager, self).__init__(*args, **kwargs)
 
     def get_queryset(self):
+        qs = super().get_queryset()
+
         if self.alive_only:
-            return SoftDeletionQuerySet(self.model).alive()
-        return SoftDeletionQuerySet(self.model)
+            qs = qs.filter(alive=True)
+
+        if not issubclass(qs.__class__, SoftDeletionQuerySet):
+            qs.__class__ = SoftDeletionQuerySet
+        return qs
 
     def hard_delete(self):
         return self.get_queryset().hard_delete()
