@@ -1,13 +1,19 @@
 from django.contrib import admin
 
-from model_controller.utils import EXCLUDE_MODEL_CONTROLLER_FIELDS
+from model_controller.mixins import ModelControllerAdminMixin
 
 
-class ModelControllerAdmin(admin.ModelAdmin):
-    exclude = EXCLUDE_MODEL_CONTROLLER_FIELDS
+class ModelControllerAdmin(ModelControllerAdminMixin, admin.ModelAdmin):
+    pass
 
-    def save_model(self, request, obj, form, change):
-        if obj.pk is None:
-            obj.created_user = request.user
-        obj.updated_user = request.user
-        obj.save()
+
+class InlineModelControllerAdmin(ModelControllerAdminMixin, admin.InlineModelAdmin):
+    pass
+
+
+class StackedInlineModelControllerAdmin(ModelControllerAdminMixin, admin.StackedInline):
+    pass
+
+
+class TabularInlineModelControllerAdmin(ModelControllerAdminMixin, admin.TabularInline):
+    pass
