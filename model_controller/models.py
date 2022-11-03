@@ -1,7 +1,17 @@
 from django.conf import settings
 from django.db import models
 from django.db.models import signals
-from django.utils.translation import ugettext_lazy as _
+try:
+    import django
+    major, feature, minor, a, b = django.VERSION
+    if major >= 2:
+        from django.utils.translation import gettext as _
+    else:
+        from django.utils.translation import ugettext as _
+except ImportError:
+    raise SerializerConfigError('Django is required. Please make sure you '
+                                'have install via pip.')
+
 
 from model_controller.fields import LiveField
 from model_controller.managers import SoftDeletionManager
