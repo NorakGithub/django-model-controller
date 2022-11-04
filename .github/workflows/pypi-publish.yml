@@ -30,10 +30,10 @@ jobs:
     - name: Set env
       run: |
         echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-        echo ${env.RELEASE_VERSION}
+        echo ${{ env.RELEASE_VERSION }}
     - name: Update setup.py version
       run: |
-        sed -i 's|{RELEASE_VERSION}|${env.RELEASE_VERSION}|g' ./setup.py
+        sed -i 's|{RELEASE_VERSION}|${{ env.RELEASE_VERSION }}|g' ./setup.py
         cat setup.py
     # - name: Set up Python
     #   uses: actions/setup-python@v3
