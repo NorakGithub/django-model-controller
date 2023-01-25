@@ -16,7 +16,7 @@ class SoftDeletionQuerySet(QuerySet):
             collector.collect(self)
             collection = collector.nested()
         try:
-            collection.active = False
+            collection.alive = False
             collection.save()
         except AttributeError:
             try:
@@ -29,7 +29,7 @@ class SoftDeletionQuerySet(QuerySet):
         return super(SoftDeletionQuerySet, self).delete()
 
     def restore(self):
-        return super(SoftDeletionQuerySet, self).update(active=True)
+        return super(SoftDeletionQuerySet, self).update(alive=True)
 
     def alive(self):
         return self.filter(alive=True)
