@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.admin.options import InlineModelAdmin
 
 from model_controller.mixins import ModelControllerAdminMixin
 
@@ -7,7 +8,7 @@ class ModelControllerAdmin(ModelControllerAdminMixin, admin.ModelAdmin):
     pass
 
 
-class InlineModelControllerAdmin(ModelControllerAdminMixin, admin.InlineModelAdmin):
+class InlineModelControllerAdmin(ModelControllerAdminMixin, InlineModelAdmin):
     pass
 
 
